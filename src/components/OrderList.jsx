@@ -51,7 +51,9 @@ const [cancelOrder, setCancelOrder] = useState("");
                 <Card.Body>
                   <Card.Title>Order #{index + 1}</Card.Title>
                   <Card.Text>Date: {new Date(order.date).toLocaleString()}</Card.Text>
-                  <Card.Text>Date: {order.status}</Card.Text>
+                  <Card.Text>Status: {order.status}</Card.Text>
+                  <Card.Text>Price: {order.payment.amount}</Card.Text>
+                  <Card.Text>Qty: {order.quantity}</Card.Text>
                   <ul>
                     {order.products.map((item) => (
                       <li key={item.id}>
