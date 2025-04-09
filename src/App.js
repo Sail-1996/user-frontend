@@ -11,8 +11,9 @@ import { Container, Navbar, Nav, Badge } from 'react-bootstrap';
 const App = () => {
   const cartItems = useSelector((state) => state.cart.cartItems) ?? [];
 
-  console.log(cartItems );
-  
+   useEffect(async() => {
+    await axios.post("http://localhost:4000/products/add")
+  }, [])
 
   return (
     <Router>
